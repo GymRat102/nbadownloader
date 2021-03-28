@@ -41,14 +41,14 @@ Luka_shotdata_201920 <- get_shotdata("2019-20", "1629029")
 
 The returned dataframe is like this:
 
-```{r}
+``` r
 library(dplyr)
 glimpse(Luka_shotdata_201920)
 ```
 
 The dataframe includes tons of information about every shot, especially x, y coordinates. For example, you can draw a super simple shot chart with the help of ggplot2:
 
-```{r}
+``` r
 Luka_shotdata_201920$LOC_X <- as.numeric(as.character(Luka_shotdata_201920$LOC_X))
 Luka_shotdata_201920$LOC_Y <- as.numeric(as.character(Luka_shotdata_201920$LOC_Y))
 
@@ -57,4 +57,3 @@ Luka_shotdata_201920 %>%
   geom_point() +
   coord_equal()
 ```
-
