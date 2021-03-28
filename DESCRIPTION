@@ -1,16 +1,17 @@
 Package: nbadownloader
-Title: What the Package Does (One Line, Title Case)
+Title: Download NBA Data
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "David",
+           family = "Duan",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+           email = "tul11166@temple.edu")
+Description: Help you download NBA data easily
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Depends:
+    httr,
+    jsonlite,
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
