@@ -1,10 +1,10 @@
-#' A demo scraping function
-#' @param season a character string indicating which season you want to scrape, default 2020-21
-#' @param playerId a character string indicating which player data you want to scrape, default 201939(Stephen Curry)
-#' @param path a character string indicating where you want to save the file, default working directory
-#' @return Stephen Curry's shotdata in 2020-21 season
+#' Function to return the dataframe of a given player's shot data in a given season
+#' @param season a character string
+#' @param playerId a character string, need to look up on nba.com
+#' @return dataframe
 #' @import httr jsonlite readr
-demo_downloader <- function(season = "2020-21", playerId = "201939", path = getwd()){
+#' @export
+get_shotdata <- function(season, playerId){
   headers = c(
     `Connection` = 'keep-alive',
     `Accept` = 'application/json, text/plain, */*',
@@ -29,9 +29,6 @@ demo_downloader <- function(season = "2020-21", playerId = "201939", path = getw
   json_resp <- jsonlite::fromJSON(httr::content(res, "text"))
   df <- data.frame(json_resp$resultSets$rowSet[1])
   colnames(df) <- json_resp[["resultSets"]][["headers"]][[1]]
-
-  file <- paste0(path, "data.csv")
-  readr::write_csv(df, file)
 
   return(df)
 }

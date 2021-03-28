@@ -6,7 +6,7 @@ Authors@R:
            family = "Duan",
            role = c("aut", "cre"),
            email = "tul11166@temple.edu")
-Description: Help you download NBA data easily
+Description: A utility package that helps you download nba data easily. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
