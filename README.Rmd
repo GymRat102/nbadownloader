@@ -22,12 +22,6 @@ This R package, nbadownloader, is a utility package that helps you download nba 
 
 ## Installation
 
-You can install the released version of nbadownloader from [CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("nbadownloader")
-```
-
 There's no version of nbadownloader on CRAN. You can install the development version from GitHub with:
 
 ``` r
