@@ -3,3 +3,4 @@
 export(demo_downloader)
 import(httr)
 import(jsonlite)
+import(readr)

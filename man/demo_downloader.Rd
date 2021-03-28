@@ -4,7 +4,14 @@
 \alias{demo_downloader}
 \title{A demo scraping function}
 \usage{
-demo_downloader()
+demo_downloader(season = "2020-21", playerId = "201939", path = getwd())
+}
+\arguments{
+\item{season}{a character string indicating which season you want to scrape, default 2020-21}
+
+\item{playerId}{a character string indicating which player data you want to scrape, default 201939(Stephen Curry)}
+
+\item{path}{a character string indicating where you want to save the file, default working directory}
 }
 \value{
 Stephen Curry's shotdata in 2020-21 season
