@@ -5,7 +5,7 @@
 #' @import httr jsonlite readr
 #' @export
 #'
-#' @example
+#' @examples
 #' get_shotdata("2020-21", "201939")
 get_shotdata <- function(season, playerId){
   headers = c(
