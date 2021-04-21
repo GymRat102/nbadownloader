@@ -4,6 +4,9 @@
 #' @return dataframe
 #' @import httr jsonlite readr
 #' @export
+#'
+#' @example
+#' get_shotdata("2020-21", "201939") --- 201939 is Stephen Curry's playerId on nba.com
 get_shotdata <- function(season, playerId){
   headers = c(
     `Connection` = 'keep-alive',
